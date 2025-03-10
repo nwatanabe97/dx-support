@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商工会デジタル活用フェス - 県内先進事例と精鋭のサポーターが集合 -（仮）開催　企画書</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Yomogi&family=Zen+Kurenaido&display=swap');
+
+    :root {
+      --color-1: #2E578C; /* MysticLibrary-1 */
+      --color-2: #182D40; /* MysticLibrary-2 */
+      --color-3: #BF807A; /* MysticLibrary-3 */
+      --color-4: #592A2A; /* MysticLibrary-4 */
+      --color-5: #F2F2F2; /* MysticLibrary-5 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Zen Kurenaido', sans-serif;
+      background-color: var(--color-5);
+      color: var(--color-2);
+      line-height: 1.4;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--color-1) 0%, var(--color-2) 100%);
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px dashed var(--color-3);
+    }
+
+    .title-area {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    h1 {
+      font-family: 'Kaisei Decol', serif;
+      font-size: 32px;
+      font-weight: bold;
+      background: linear-gradient(45deg, #fff, #f0f0f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      margin: 0;
+      position: relative;
+    }
+
+    .date-source {
+      text-align: right;
+      font-family: 'Yomogi', cursive;
+      font-size: 14px;
+    }
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+      background-color: white;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+      padding: 15px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+      border: 2px solid transparent;
+      border-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,10 C20,20 80,20 90,10 C80,80 20,80 10,90 C20,80 80,80 90,90' stroke='%232E578C' fill='none' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") 30;
+    }
+
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      background-color: rgba(191, 128, 122, 0.1);
+      border-radius: 0 0 0 25px;
+      z-index: 0;
+    }
+
+    h2 {
+      font-family: 'Kaisei Decol', serif;
+      font-size: 24px;
+      color: var(--color-1);
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px dashed var(--color-3);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-icon {
+      width: 32px;
+      height: 32px;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    h3 {
+      font-family: 'Kaisei Decol', serif;
+      font-size: 18px;
+      color: var(--color-1);
+      margin: 15px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--color-2);
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      background: linear-gradient(transparent 60%, rgba(191, 128, 122, 0.3) 40%);
+      font-weight: bold;
+      padding: 0 2px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: var(--color-1);
+      opacity: 0.15;
+    }
+
+    .connection {
+      position: relative;
+      height: 50px;
+      margin: 10px 0;
+    }
+
+    .connection::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background-color: var(--color-3);
+      animation: dashFlow 3s linear infinite;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: var(--color-1);
+      color: white;
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      background-color: white;
+    }
+
+    tr:nth-child(even) td {
+      background-color: var(--color-5);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      background-color: var(--color-1);
+      color: white;
+      border-radius: 15px;
+      font-size: 12px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(5px);
+      border-radius: 10px;
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .notes {
+      background-color: rgba(191, 128, 122, 0.1);
+      border-left: 3px solid var(--color-3);
+      padding: 10px 15px;
+      margin: 10px 0;
+      position: relative;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .notes::before {
+      content: '💡';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background-color: var(--color-3);
+      color: white;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .layout-box {
+      border: 2px dashed var(--color-1);
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+      background-color: rgba(46, 87, 140, 0.05);
+    }
+
+    .layout-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .layout-cell {
+      flex: 1;
+      padding: 10px;
+      background-color: white;
+      border-radius: 8px;
+      margin: 0 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .arrow-flow {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .arrow-flow::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-3);
+      z-index: 0;
+    }
+
+    .arrow-step {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: var(--color-1);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer {
+      background-color: var(--color-2);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    /* Animation effects */
+    @keyframes dashFlow {
+      from {
+        background-image: linear-gradient(var(--color-3) 50%, transparent 50%);
+        background-size: 2px 12px;
+        background-position: 0 0;
+      }
+      to {
+        background-image: linear-gradient(var(--color-3) 50%, transparent 50%);
+        background-size: 2px 12px;
+        background-position: 0 12px;
+      }
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .animate-gradient {
+      background: linear-gradient(270deg, var(--color-1), var(--color-3), var(--color-1));
+      background-size: 200% 200%;
+      animation: gradientShift 3s ease infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .bounce {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .fade {
+      animation: fade 3s infinite;
+    }
+
+    @keyframes fade {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .flip {
+      animation: flip 3s infinite;
+    }
+
+    @keyframes flip {
+      0% {
+        transform: rotateY(0);
+      }
+      50% {
+        transform: rotateY(180deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .column {
+        flex: 100%;
+      }
+    }
+
+    /* Custom hand-drawn effects */
+    .hand-drawn {
+      position: relative;
+    }
+
+    .hand-drawn::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='5' viewBox='0 0 100 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,3 C10,1 20,4 30,2 C40,0 50,5 60,3 C70,1 80,4 90,2 C95,1 100,3 100,3' stroke='%23BF807A' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-size: 100px 5px;
+    }
+
+    .check-box {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 5px;
+    }
+
+    .check-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--color-3);
+      border-radius: 3px;
+      position: relative;
+      margin-right: 5px;
+    }
+
+    .check-icon::before {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--color-3);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <header>
+      <div class="title-area">
+        <svg class="section-icon" viewBox="0 0 512 512" width="48" height="48">
+          <path fill="white" d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 21 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/>
+        </svg>
+        <h1>商工会デジタル活用・DXフェス - 県内先進事例と精鋭のサポーターが集合 -（仮）開催　企画書</h1>
+        <svg class="section-icon" viewBox="0 0 512 512" width="48" height="48">
+          <path fill="white" d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/>
+        </svg>
+      </div>
+      <div class="date-source">
+        <span class="check-box"><span class="check-icon"></span></span> 山梨県商工会連合会　経営支援課<br>
+        <span class="check-box"><span class="check-icon"></span></span> 令和７年度
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Column 1 -->
+      <div class="column">
+        <!-- Purpose Section -->
+        <div class="section">
+          <h2>
+            <svg class="section-icon pulse" viewBox="0 0 512 512">
+              <path fill="#2E578C" d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm16-256a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm-80-128c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32s-14.3 32-32 32h-16v96a16 16 0 1 1 -32 0V160h-16c-17.7 0-32-14.3-32-32z"/>
+            </svg>
+            1. 趣旨
+          </h2>
+          <p>
+            <span class="check-box"><span class="check-icon"></span></span>
+            <span class="highlight">急速なビジネス環境の変化</span>に対応していくため、企業の業務プロセスやビジネスモデルの変革が急務です。
+          </p>
+          <p>
+            <span class="check-box"><span class="check-icon"></span></span>
+            しかしＤＸ化は、手法や効果がわからず取組みが進んでいる企業も多くなく、
+            <span class="highlight">中小・小規模事業者</span>においては、さらに遠のいている状況にあります。
+          </p>
+          <div class="notes">
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              令和7年度は商工会のＤＸ支援事業が<span class="highlight">３年目</span>となり、
+              これまでの取組の<span class="highlight">集大成</span>として、
+              商工会が実施及び連携しているDX・デジタル化の支援メニューの取組を一堂に集めます。
+            </p>
+          </div>
+          <div class="card">
+            <svg class="card-icon" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" opacity="0.15" d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/>
+            </svg>
+            <h3>
+              <svg class="section-icon" viewBox="0 0 512 512" width="24" height="24">
+                <path fill="#2E578C" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
+              </svg>
+              主な目的
+            </h3>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              実際に触れることのできるコンテンツを用意し集約的に参加者のDX化への更なる
+              <span class="highlight">普及啓発を図る</span>
+            </p>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              県内DX支援の<span class="highlight">象徴的なイベント</span>を開催
+            </p>
+          </div>
+          <div class="glassmorphism">
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              <span class="highlight">相談、展示、セミナーを併用</span>した相乗効果でデジタル化の普及啓発
+            </p>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              商工会のデジタル化支援メニューの<span class="highlight">直接周知</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Date and Venue Sections -->
+        <div class="section">
+          <h2>
+            <svg class="section-icon flip" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" d="M128 32V64H80c-26.5 0-48 21.5-48 48v48H440c13.3 0 24 10.7 24 24s-10.7 24-24 24H32V384c0 26.5 21.5 48 48 48h48v32H80c-44.2 0-80-35.8-80-80V112C0 67.8 35.8 32 80 32h48zm128 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H256c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H384c-8.8 0-16-7.2-16-16V144zM256 288c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H224c-8.8 0-16-7.2-16-16V304c0-8.8 7.2-16 16-16h32zm112-16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H384c-8.8 0-16-7.2-16-16V272z"/>
+            </svg>
+            2. 日時
+          </h2>
+          <p>
+            <span class="check-box"><span class="check-icon"></span></span>
+            令和７年　９月平日　午後
+          </p>
+          <p class="notes">
+            <span class="check-box"><span class="check-icon"></span></span>
+            周知期間、準備期間、会場、出展者（機関）都合により前後します。
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>
+            <svg class="section-icon bounce" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" d="M256 0c17.7 0 32 14.3 32 32V66.7C368.4 80.1 431.9 143.6 445.3 224H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H445.3C431.9 368.4 368.4 431.9 288 445.3V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.3C143.6 431.9 80.1 368.4 66.7 288H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H66.7C80.1 143.6 143.6 80.1 224 66.7V32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"/>
+            </svg>
+            3. 会場
+          </h2>
+          <p>
+            <span class="check-box"><span class="check-icon"></span></span>
+            甲府記念日ホテル
+          </p>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="column">
+        <!-- Event Content Section -->
+        <div class="section">
+          <h2>
+            <svg class="section-icon flip" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/>
+            </svg>
+            4. 開催内容
+          </h2>
+
+          <div class="card">
+            <h3>
+              <svg viewBox="0 0 512 512" width="24" height="24">
+                <path fill="#2E578C" d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416z"/>
+              </svg>
+              A. セッションエリア
+            </h3>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              <strong>DX先進企業講演</strong> - DX推進による成功事例を紹介
+            </p>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              <strong>DX事例企業セッション(仮)</strong> - 地元企業のDX実践事例発表
+            </p>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              <strong>集客力のあるセッション</strong> - 最新DXトレンド紹介など
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>
+              <svg viewBox="0 0 512 512" width="24" height="24">
+                <path fill="#2E578C" d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+              </svg>
+              B. ブースエリア
+            </h3>
+            <p style="background-color: #f9f9f9; padding: 8px; border-radius: 5px; margin-bottom: 10px;">
+              <span style="display: inline-block; width: 20px; height: 20px; background-color: var(--color-3); color: white; text-align: center; border-radius: 50%; margin-right: 5px;">✓</span>
+              <strong>各出展者によるミニセミナー</strong>
+              <br><span class="highlight">（20分～30分程度 複数回実施）</span>
+            </p>
+            <p style="background-color: #f9f9f9; padding: 8px; border-radius: 5px; margin-bottom: 10px;">
+              <span style="display: inline-block; width: 20px; height: 20px; background-color: var(--color-3); color: white; text-align: center; border-radius: 50%; margin-right: 5px;">✓</span>
+              <strong>各出展者による相談会・ツール体験</strong>
+              <br><span class="highlight">（随時）</span>
+            </p>
+            <p style="background-color: #f9f9f9; padding: 8px; border-radius: 5px; margin-bottom: 10px;">
+              <span style="display: inline-block; width: 20px; height: 20px; background-color: var(--color-3); color: white; text-align: center; border-radius: 50%; margin-right: 5px;">✓</span>
+              <strong>商工会職員によるコンシェルジュ</strong>
+              <br><span class="highlight">（総合案内・誘導）</span>
+            </p>
+
+            <div class="notes" style="margin-top: 15px;">
+              <p>
+                各出展者（機関）ごとのミニセミナーを<span class="highlight">時間割</span>で行い、商工会員には自由に参加いただく。すき間の時間で、各出展者（機関）のブースを構えていただき、会員事業所が相談に巡回していくのを職員がフォローする形とする。
+              </p>
+            </div>
+          </div>
+
+          <div class="arrow-flow" style="margin: 20px 0; text-align: center;">
+            <div class="arrow-step" style="background-color: var(--color-1); color: white; display: inline-block; width: 60px; height: 60px; border-radius: 50%; line-height: 60px; text-align: center; font-weight: bold;">来場</div>
+            <span style="margin: 0 5px; color: var(--color-3); font-weight: bold;">→</span>
+            <div class="arrow-step" style="background-color: var(--color-1); color: white; display: inline-block; width: 60px; height: 60px; border-radius: 50%; line-height: 60px; text-align: center; font-weight: bold;">セッション</div>
+            <span style="margin: 0 5px; color: var(--color-3); font-weight: bold;">→</span>
+            <div class="arrow-step" style="background-color: var(--color-1); color: white; display: inline-block; width: 60px; height: 60px; border-radius: 50%; line-height: 60px; text-align: center; font-weight: bold;">ブース</div>
+            <span style="margin: 0 5px; color: var(--color-3); font-weight: bold;">→</span>
+            <div class="arrow-step" style="background-color: var(--color-1); color: white; display: inline-block; width: 60px; height: 60px; border-radius: 50%; line-height: 60px; text-align: center; font-weight: bold;">個別相談</div>
+          </div>
+
+          <div class="notes" style="background-color: #f8f0e8; border-left: 3px solid var(--color-3);">
+            <p style="font-weight: bold; margin-bottom: 5px;">
+              <span style="display: inline-block; width: 20px; height: 20px; background-color: var(--color-3); color: white; text-align: center; border-radius: 50%; margin-right: 5px;">✓</span>
+              来場者体験の流れ
+            </p>
+            <ol style="padding-left: 20px; margin: 5px 0;">
+              <li>総合案内で来場者のニーズをヒアリング</li>
+              <li>興味に合わせたセッションを紹介</li>
+              <li>セッション後、関連ブースへ誘導</li>
+              <li>各ブースでのデモ体験と相談</li>
+              <li>具体的な支援メニューへの接続</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Target Participants Section -->
+        <div class="section">
+          <h2>
+            <svg class="section-icon pulse" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" d="M112 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm40 304V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V256.9L59.4 304.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c17.4-28.9 48.6-46.6 82.3-46.6h29.7c33.7 0 64.9 17.7 82.3 46.6l58.3 97c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9L232 256.9V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V352H152zM432 224a144 144 0 1 0 0-288 144 144 0 1 0 0 288zm16-208v48h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V96H368c-8.8 0-16-7.2-16-16s7.2-16 16-16h48V16c0-8.8 7.2-16 16-16s16 7.2 16 16z"/>
+            </svg>
+            5. 参加対象
+          </h2>
+          <p style="background-color: #f9f9f9; padding: 8px; border-radius: 5px;">
+            <span style="display: inline-block; width: 20px; height: 20px; background-color: var(--color-3); color: white; text-align: center; border-radius: 50%; margin-right: 5px;">✓</span>
+            商工会員（従業員含む）、商工会職員
+          </p>
+          <div class="card">
+            <svg class="card-icon" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" opacity="0.15" d="M32 32c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-44.2 0-80-35.8-80-80V64C0 46.3 14.3 32 32 32zm96 96c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-17.7 0-32-14.3-32-32zm0 96c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-17.7 0-32-14.3-32-32zm0 96c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-17.7 0-32-14.3-32-32z"/>
+            </svg>
+            <p style="background-color: #f9f9f9; padding: 5px; border-radius: 5px;">
+              <span style="display: inline-block; width: 20px; height: 20px; background-color: var(--color-3); color: white; text-align: center; border-radius: 50%; margin-right: 5px;">✓</span>
+              目標参加者数　<span class="highlight">200名</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Budget Section -->
+        <div class="section">
+          <h2>
+            <svg class="section-icon bounce" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" d="M512 80c0 18-14.3 34.6-38.4 48c-29.1 16.1-72.5 27.5-122.3 30.9c-3.7-1.8-7.4-3.5-11.3-5C300.6 137.4 248.2 128 192 128c-8.3 0-16.4 .2-24.5 .6l-1.1-.6C142.3 114.6 128 98 128 80c0-44.2 86-80 192-80S512 35.8 512 80zM160.7 161.1c10.2-.7 20.7-1.1 31.3-1.1c62.2 0 117.4 12.3 152.5 31.4C369.3 204.9 384 221.7 384 240c0 4-.7 7.9-2.1 11.7c-4.6 13.2-17 25.3-35 35.5c0 0 0 0 0 0c-.1 .1-.3 .1-.4 .2l0 0 0 0c-.3 .2-.6 .3-.9 .5c-35 19.4-90.8 32-153.6 32c-59.6 0-112.9-11.3-148.2-29.1c-1.9-.9-3.7-1.9-5.5-2.9C14.3 274.6 0 258 0 240c0-34.8 53.4-64.5 128-75.4c10.5-1.5 21.4-2.7 32.7-3.5zM416 240c0-21.9-10.6-39.9-24.1-53.4c28.3-4.4 54.2-11.4 76.2-20.5c16.3-6.8 31.5-15.2 43.9-25.5V176c0 19.3-16.5 37.1-43.8 50.9c-14.6 7.4-32.4 13.7-52.4 18.5c.1-1.8 .2-3.5 .2-5.3zm-32 96c0 18-14.3 34.6-38.4 48c-1.8 1-3.6 1.9-5.5 2.9C304.9 404.7 251.6 416 192 416c-62.8 0-118.6-12.6-153.6-32C14.3 370.6 0 354 0 336V300.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 342.6 135.8 352 192 352s108.6-9.4 148.1-25.9c7.8-3.2 15.3-6.9 22.4-10.9c6.1-3.4 11.8-7.2 17.2-11.2c1.5-1.1 2.9-2.3 4.3-3.4V336zm32 0V282.1c19.9-4.7 36.8-10.7 50.7-17.5c27.2-13.3 45.1-30.2 46.7-48.6l0 0c.4-4.4 .6-8.8 .6-13.2V176c0-5.8-.6-11.6-1.9-17.2c-2.5-10.2-7.8-20.1-15.9-28.8l0 0 0 0c-5.3-5.7-12-10.8-19.7-15.2C424.5 103.7 360.3 96 288 96s-136.5 7.7-169.5 18.9c-7.7 4.3-14.4 9.4-19.7 15.2c-8.7 9.4-14.1 20-16 30.1C81.6 164.5 81 169.3 81 174v25.8c0 34.7 87.3 63 195.2 63c17.4 0 34.2-1.1 50.1-3.1c15.0 4.8 31.3 7.1 48.7 7.1c38.2 0 73.6-10.9 100.7-29.1c.6 2.6 .9 5.2 .9 7.9v55.5c-19.9 4.7-36.8 10.7-50.7 17.5c-27.3 13.8-45.3 31.2-46.7 49.5c-.4 4.4-.6 8.9-.6 13.2V336c0 2.7 .3 5.4 .9 7.9c-27.2-18.2-62.5-29.1-100.7-29.1c-17.4 0-33.7 2.3-48.7 7.1c-15.9-2-32.7-3.1-50.1-3.1C136.2 319 80.7 332 47.8 349c-4.3-3.5-7.8-7.3-10.3-11.3C34.7 333 32.6 327.4 32 322v-2l0-56V174c0-8.1 1.7-16.2 4.9-23.8C58.3 125.7 117 106.5 192 100.3V128c0 44.2 86 80 192 80s192-35.8 192-80V100.2c75 6.2 133.7 25.4 155.1 49.9c3.3 7.6 4.9 15.6 4.9 23.9v56 56c0 5.4-1.1 10.7-3.1 15.8c-2.6 6.8-7 13.3-12.8 19.1c-11.6 11.6-30 21.1-52.5 28.3c-34.3 11-81.1 17.6-131.6 18.8V336z"/>
+            </svg>
+            6. 予算
+          </h2>
+          <p style="background-color: #f9f9f9; padding: 8px; border-radius: 5px;">
+            <span style="display: inline-block; width: 20px; height: 20px; background-color: var(--color-3); color: white; text-align: center; border-radius: 50%; margin-right: 5px;">✓</span>
+            別紙参照
+          </p>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="column">
+        <!-- Exhibitor Section -->
+        <div class="section">
+          <h2>
+            <svg class="section-icon fade" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" d="M40 64C26.7 64 16 74.7 16 88v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V88c0-13.3-10.7-24-24-24H40zM192 448c0 8.8 7.2 16 16 16H240c8.8 0 16-7.2 16-16V384H192v64zm32-336c-17.7 0-32 14.3-32 32V384h64V144c0-17.7-14.3-32-32-32zM160 96c0-35.3 28.7-64 64-64s64 28.7 64 64V384h32v64c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V384 336 288H384V88c0-13.3-10.7-24-24-24H336c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h24v80H384V88c0-13.3-10.7-24-24-24H336c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h24v80h32V88c0-13.3-10.7-24-24-24H312c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h24v80h-32V96z"/>
+            </svg>
+            7. イベント構成と出展者
+          </h2>
+
+          <div class="notes">
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              イベントは「セッション」と「ブース」の2エリアで構成されます。セッションエリアはホールや会議室で開催され、
+              ブースエリアはホールの外側に配置されます。
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>
+              <svg viewBox="0 0 512 512" width="24" height="24">
+                <path fill="#2E578C" d="M192 96c0-17.7 14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32s-32-14.3-32-32zm-37.3 82.7L112 222.3V288H400v-65.7l-42.7-43.6c-3-3-7.1-4.7-11.3-4.7H304v48c0 8.8-7.2 16-16 16H224c-8.8 0-16-7.2-16-16v-48H166.6c-4.2 0-8.3 1.7-11.3 4.7zM0 96C0 60.7 28.7 32 64 32h384c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zm64 24v48h48V120H64zm48 272v-48H64v48h48zM400 120v48h48V120H400zm48 272h-48v-48h48v48z"/>
+              </svg>
+              セッションエリア
+            </h3>
+            <p>主に以下のセッションで構成され、ホールや会議室で実施します：</p>
+            <ol>
+              <li>DX先進企業講演</li>
+              <li>DX事例企業セッション(仮)</li>
+              <li>集客力のあるセッション</li>
+            </ol>
+          </div>
+
+          <div class="card">
+            <h3>
+              <svg viewBox="0 0 512 512" width="24" height="24">
+                <path fill="#2E578C" d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112-16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H224c-8.8 0-16-7.2-16-16s7.2-16 16-16zm144 16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/>
+              </svg>
+              ブースエリア：メリット別3ゾーン構成
+            </h3>
+            <p>各出展者は以下の3つのゾーンに分けて配置し、カラーコード分けで視認性を高めます：</p>
+          </div>
+
+          <h3 style="color: #2E578C;">
+            <svg viewBox="0 0 512 512" width="24" height="24">
+              <path fill="#2E578C" d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/>
+            </svg>
+            時短・効率化ゾーン（青）
+          </h3>
+          <table style="border-left: 4px solid #2E578C;">
+            <tr>
+              <th>出展者</th>
+              <th>支援内容</th>
+            </tr>
+            <tr>
+              <td>筑間先生</td>
+              <td>ChatGPT業務効率化</td>
+            </tr>
+            <tr>
+              <td>ソリマチ</td>
+              <td>クラウド会計ソフト</td>
+            </tr>
+            <tr>
+              <td>中野先生</td>
+              <td>Excel業務効率化</td>
+            </tr>
+            <tr>
+              <td>DXパートナー</td>
+              <td>コスト削減ツール</td>
+            </tr>
+          </table>
+
+          <h3 style="color: #2E8B57;">
+            <svg viewBox="0 0 512 512" width="24" height="24">
+              <path fill="#2E8B57" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+            </svg>
+            集客ゾーン（緑）
+          </h3>
+          <table style="border-left: 4px solid #2E8B57;">
+            <tr>
+              <th>出展者</th>
+              <th>支援内容</th>
+            </tr>
+            <tr>
+              <td>渡辺先生</td>
+              <td>Canvaチラシ・SNS投稿</td>
+            </tr>
+            <tr>
+              <td>Momoka先生</td>
+              <td>SNS集客手法</td>
+            </tr>
+            <tr>
+              <td>GMOペパポ</td>
+              <td>無料HP作成</td>
+            </tr>
+            <tr>
+              <td>講師未定</td>
+              <td>Googleビジネスプロフィール</td>
+            </tr>
+          </table>
+
+          <h3 style="color: #D2691E;">
+            <svg viewBox="0 0 512 512" width="24" height="24">
+              <path fill="#D2691E" d="M256 96c0-53 43-96 96-96h38.4C439.9 0 480 40.1 480 89.6V176v16V376c0 75.1-60.9 136-136 136s-136-60.9-136-136V296c0-22.1-17.9-40-40-40s-40 17.9-40 40V464c0 26.5-21.5 48-48 48s-48-21.5-48-48V296c0-75.1 60.9-136 136-136s136 60.9 136 136v80c0 22.1 17.9 40 40 40s40-17.9 40-40V192H384V89.6c0-4.2-3.4-7.6-7.6-7.6H352c-17.7 0-32 14.3-32 32v32h16c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V144c0-44.2 35.8-80 80-80h64V32H256 240 208c-61.9 0-112 50.1-112 112v80H80c-26.5 0-48-21.5-48-48V144c0-26.5 21.5-48 48-48H96V64H80C35.8 64 0 99.8 0 144v32c0 61.9 50.1 112 112 112h16v8c0 26.2 6.2 51 17.1 73c-6.9 21.7-28.1 38-53.1 38c-30.9 0-56-25.1-56-56V240 144C36 64.5 100.5 0 180 0h76V32 96z"/>
+            </svg>
+            組織力強化ゾーン（橙）
+          </h3>
+          <table style="border-left: 4px solid #D2691E;">
+            <tr>
+              <th>出展者</th>
+              <th>支援内容</th>
+            </tr>
+            <tr>
+              <td>DXエコシステム</td>
+              <td>支援制度紹介</td>
+            </tr>
+            <tr>
+              <td>MAT深澤先生</td>
+              <td>Googleワークスペース</td>
+            </tr>
+            <tr>
+              <td>土橋先生</td>
+              <td>IT導入補助金申請</td>
+            </tr>
+            <tr>
+              <td>三井先生</td>
+              <td>デジタルよろず相談</td>
+            </tr>
+          </table>
+
+          <div class="notes" style="margin-top: 20px;">
+            <p><strong>シンプルな運営設計：</strong></p>
+            <ul>
+              <li>入口すぐの丸テーブル型総合案内で来場者をスムーズに誘導</li>
+              <li>各出展者が自律的に動ける仕組み</li>
+              <li>来場者の自由な回遊を促す空間設計</li>
+            </ul>
+          </div>
+
+          <!-- Event Layout Visualization -->
+          <div class="layout-box" style="margin-top: 20px;">
+            <h4 style="text-align: center; margin-bottom: 15px;">会場レイアウトイメージ</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div style="background-color: #f5f5f5; padding: 15px; border-radius: 8px; text-align: center; border: 2px dashed #666;">
+                セッションエリア（ホール・会議室）<br>
+                ・DX先進企業講演<br>
+                ・DX事例企業セッション<br>
+                ・集客力のあるセッション
+              </div>
+              <div style="text-align: center; font-size: 20px;">↓</div>
+              <div style="display: flex; justify-content: space-between; gap: 10px;">
+                <div style="flex: 1; background-color: rgba(46, 87, 140, 0.2); padding: 10px; border-radius: 8px; text-align: center;">
+                  <strong style="color: #2E578C;">時短・効率化ゾーン</strong>
+                  <div style="font-size: 12px;">4ブース</div>
+                </div>
+                <div style="flex: 1; background-color: rgba(46, 139, 87, 0.2); padding: 10px; border-radius: 8px; text-align: center;">
+                  <strong style="color: #2E8B57;">集客ゾーン</strong>
+                  <div style="font-size: 12px;">4ブース</div>
+                </div>
+                <div style="flex: 1; background-color: rgba(210, 105, 30, 0.2); padding: 10px; border-radius: 8px; text-align: center;">
+                  <strong style="color: #D2691E;">組織力強化ゾーン</strong>
+                  <div style="font-size: 12px;">4ブース</div>
+                </div>
+              </div>
+              <div style="text-align: center; background-color: #f0f0f0; padding: 5px; border-radius: 50%; width: 100px; height: 100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; border: 2px solid #ccc;">
+                総合案内
+              </div>
+              <div style="text-align: center; font-size: 20px;">↑</div>
+              <div style="background-color: #eee; padding: 5px; text-align: center; border-radius: 8px;">
+                入口
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Info Section -->
+        <div class="section">
+          <h2>
+            <svg class="section-icon fade" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+            </svg>
+            DXのメリット
+          </h2>
+          <div class="card">
+            <svg class="card-icon" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" opacity="0.15" d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4h54.1l109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109V104c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7H352c-8.8 0-16-7.2-16-16V102.6c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 101.8 26.4l53.9 53.9 33.5-33.5c12.5-12.5 32.8-12.5 45.3 0l47.5 47.5c12.5 12.5 12.5 32.8 0 45.3L448 413.3V464c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V413.3l-40-40c-12.5-12.5-12.5-32.8 0-45.3l33.5-33.5c8.4-8.4 13.1-19.8 13.1-31.6L224 208c0 .3 0 .5 0 .8c0 79.5 64.5 144 144 144c10.5 0 20.7-1.1 30.5-3.2c11.2-2.4 14.1-16.1 6-24.2l-63.9-63.9c-3-3-4.7-7.1-4.7-11.3V192c0-8.8 7.2-16 16-16h57.5c4.2 0 8.3 1.7 11.3 4.7l63.9 63.9c8.1 8.1 21.8 5.2 24.2-6c2.2-9.8 3.2-20 3.2-30.5L512 144z"/>
+            </svg>
+            <h3>
+              <svg viewBox="0 0 512 512" width="24" height="24">
+                <path fill="#2E578C" d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/>
+              </svg>
+              業務効率化
+            </h3>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              手作業の自動化による<span class="highlight">作業時間の短縮</span>
+            </p>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              <span class="highlight">ミスの削減</span>と品質向上
+            </p>
+          </div>
+          <div class="card">
+            <svg class="card-icon" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" opacity="0.15" d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm96 288H448c17.7 0 32-14.3 32-32V251.8c0-7.6-2.7-15-7.7-20.8l-65.8-76.8c-12.1-14.2-33.7-15-46.9-1.8l-21 21c-10 10-26.4 9.2-35.4-1.6l-39.2-47c-12.6-15.1-35.7-15.4-48.7-.6L135.9 215c-5.1 5.8-7.9 13.3-7.9 21.1v84c0 17.7 14.3 32 32 32z"/>
+            </svg>
+            <h3>
+              <svg viewBox="0 0 512 512" width="24" height="24">
+                <path fill="#2E578C" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM388.1 312.8c12.3-3.8 24.3 6.9 19.3 18.7C382.4 390.6 324.2 432 256.3 432C173.8 432 96 368 96 288c0-25.6 8.2-49.8 23.2-70.1c6.4-8.7 19.9-7.8 24.7 1.7c12.1 23.7 36.5 39.9 64.4 39.9c8.7 0 16.9-1.6 24.5-4.3c5.5-2 11.9 .1 14.4 5.3l41.4 92.9c2.4 5.5 8.3 8.3 14 7.1l85.5-21.7z"/>
+              </svg>
+              売上向上
+            </h3>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              オンラインでの<span class="highlight">新規顧客獲得</span>
+            </p>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              <span class="highlight">販路拡大</span>と新市場開拓
+            </p>
+          </div>
+          <div class="card">
+            <svg class="card-icon" viewBox="0 0 512 512" width="32" height="32">
+              <path fill="#2E578C" opacity="0.15" d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/>
+            </svg>
+            <h3>
+              <svg viewBox="0 0 512 512" width="24" height="24">
+                <path fill="#2E578C" d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/>
+              </svg>
+              働き方改革
+            </h3>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              <span class="highlight">テレワーク</span>の実現
+            </p>
+            <p>
+              <span class="check-box"><span class="check-icon"></span></span>
+              <span class="highlight">時間や場所に縛られない</span>柔軟な働き方
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <svg width="24" height="24" viewBox="0 0 512 512">
+        <path fill="white" d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/>
+      </svg>
+      山梨県商工会連合会　経営支援課　令和７年度事業
+      <svg width="24" height="24" viewBox="0 0 512 512">
+        <path fill="white" d="M64 464H288c8.8 0 16-7.2 16-16V384H288v48H64V128H224V112H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM224 304H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H224c-8.8 0-16 7.2-16 16V288c0 8.8 7.2 16 16 16zm16-208H432V272H240V96z"/>
+      </svg>
+    </footer>
+  </div>
+
+  <script>
+    // Add hover effects to icons
+    document.querySelectorAll('.section-icon, .check-icon').forEach(icon => {
+      icon.style.transition = "transform 0.3s, color 0.3s";
+      icon.addEventListener('mouseover', () => {
+        icon.style.transform = "scale(1.2)";
+      });
+      icon.addEventListener('mouseout', () => {
+        icon.style.transform = "scale(1)";
+      });
+    });
+
+    // Add animation effect on scroll
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeIn 0.5s ease forwards';
+          entry.target.style.opacity = '1';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      section.style.opacity = '0';
+      observer.observe(section);
+    });
+
+    // Add animation for fadeIn
+    document.head.insertAdjacentHTML('beforeend', `
+      <style>
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      </style>
+    `);
+  </script>
+</body>
+</html>
